@@ -10,7 +10,7 @@ description: 前端知识架构体系22
 
 ### 1、开发工具
 
-* Git
+* Git1
 * Vscode
 
 ### 2、基础知识
