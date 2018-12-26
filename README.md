@@ -26,9 +26,10 @@ description: 前端知识架构体系
 
 ### 1、HTTP
 
-* XXX
-* XXX
-* XXX
+* [http](https://github.com/frontendmap/frontendmap/blob/master/net/http.md)
+* [socket](https://github.com/frontendmap/frontendmap/blob/master/net/socket.md)
+* [ajax/fetch](https://github.com/frontendmap/frontendmap/blob/master/net/ajax-fetch.md)
+* [性能优化](https://github.com/frontendmap/frontendmap/blob/master/net/performance.md)
 
 ## 四：运行环境
 
