@@ -8,32 +8,32 @@ description: 前端知识架构体系22
 
 ## 一：开发环境
 
-### 1、开发工具
+### 1.1、开发工具
 
 * Git
 * Vscode
 
-### 2、基础知识
+### 1.2、基础知识
 
 * 算法
 * 数据结构
 * 面向对象
 * 设计模式
 
-### 3、前端框架
+### 1.3、前端框架
 
 * [Vue](https://zhouxianfei.gitbooks.io/vue/content/)
 * [React](https://zhouxianfei.gitbooks.io/react/content/)
 * Angular
 
-### 4、脚手架
+### 1.4、脚手架
 
 * vueCli
 * create-react-app
 
 ## 二：服务器
 
-### 1、nodejs
+### 2.1、nodejs
 
 * XXX
 * XXX
@@ -41,7 +41,7 @@ description: 前端知识架构体系22
 
 ## 三：网络
 
-### 1、HTTP
+### 3.1、HTTP
 
 * [http](https://github.com/frontendmap/frontendmap/blob/master/net/http.md)
 * [socket](https://github.com/frontendmap/frontendmap/blob/master/net/socket.md)
@@ -50,26 +50,26 @@ description: 前端知识架构体系22
 
 ## 四：运行环境
 
-### 1、性能优化
+### 4.1、性能优化
 
 * XXX
 * XXX
 * XXX
 
-### 2、W3C 标准
+### 4.2、W3C 标准
 
 * HTML
 * CSS
 * JS Web API
 
-### 3、ECMA标准
+### 4.3、ECMA标准
 
 * ES5
 * ES6
 
 ## 五：面试总结
 
-### 1、2018  Interview
+### 5.1、2018  Interview
 
 * [2018-11-28](https://zhouxianfei.gitbooks.io/resume-front/content/)
 
