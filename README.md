@@ -21,8 +21,8 @@ description: 前端知识架构体系22
 
 ### 3、前段框架
 
-* [Vue](http://zhouxianfei.gitee.io/gitbook-vue/)
-* [React](http://zhouxianfei.gitee.io/gitbook-react/)
+* [Vue](https://zhouxianfei.gitbooks.io/vue/content/)
+* [React](https://zhouxianfei.gitbooks.io/react/content/)
 
 ## 二：服务器
 
@@ -64,7 +64,7 @@ description: 前端知识架构体系22
 
 ### 1、2018  Interview
 
-* [2018-11-28](http://zhouxianfei.gitee.io/gitbook-resume-front)
+* [2018-11-28](https://zhouxianfei.gitbooks.io/resume-front/content/)
 
 
 
