@@ -13,6 +13,17 @@ description: 前端知识架构体系
 * Git
 * Vscode
 
+### 2、基础知识
+
+* XXX
+* XXX
+* XXX
+
+### 3、前段框架
+
+* [Vue](http://zhouxianfei.gitee.io/gitbook-vue/)
+* [React](http://zhouxianfei.gitee.io/gitbook-react/)
+
 
 
 ## 二：服务器
@@ -41,6 +52,23 @@ description: 前端知识架构体系
 * XXX
 
 ### 2、W3C 标准
+
+* HTML
+* CSS
+* JavaScript
+
+### 3、ECMA标准
+
+* ES5
+* ES6
+
+## 五：面试总结
+
+###  1、2018  Interview
+
+* [2018-11-28](http://zhouxianfei.gitee.io/gitbook-resume-front)
+
+
 
 
 
