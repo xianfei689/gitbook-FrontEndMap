@@ -19,7 +19,7 @@ description: 前端知识架构体系22
 * XXX
 * XXX
 
-### 3、前段框架
+### 3、前端框架
 
 * [Vue](https://zhouxianfei.gitbooks.io/vue/content/)
 * [React](https://zhouxianfei.gitbooks.io/react/content/)
