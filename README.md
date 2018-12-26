@@ -53,7 +53,7 @@ description: 前端知识架构体系22
 
 * HTML
 * CSS
-* JavaScript
+* JS Web API
 
 ### 3、ECMA标准
 
