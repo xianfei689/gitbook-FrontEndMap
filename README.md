@@ -4,13 +4,13 @@ description: 前端知识架构体系22
 
 # 前端知识架构体系（FrontEndMap）
 
-![&#x524D;&#x6BB5;&#x77E5;&#x8BC6;&#x67B6;&#x6784;&#x4F53;&#x7CFB;&#x56FE;](.gitbook/assets/image%20%281%29.png)
+![前段知识架构体系图](.gitbook/assets/image %281%29.png)
 
 ## 一：开发环境
 
 ### 1、开发工具
 
-* Git1
+* Git
 * Vscode
 
 ### 2、基础知识
@@ -23,8 +23,6 @@ description: 前端知识架构体系22
 
 * [Vue](http://zhouxianfei.gitee.io/gitbook-vue/)
 * [React](http://zhouxianfei.gitee.io/gitbook-react/)
-
-
 
 ## 二：服务器
 
@@ -64,13 +62,9 @@ description: 前端知识架构体系22
 
 ## 五：面试总结
 
-###  1、2018  Interview
+### 1、2018  Interview
 
 * [2018-11-28](http://zhouxianfei.gitee.io/gitbook-resume-front)
-
-
-
-
 
 
 
