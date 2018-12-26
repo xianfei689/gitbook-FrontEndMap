@@ -6,7 +6,7 @@ description: 前端知识架构体系22
 
 ![前段知识架构体系图](.gitbook/assets/image %281%29.png)
 
-## 一：开发环境
+## 一：开发环境22
 
 ### 1、开发工具
 
@@ -28,8 +28,6 @@ description: 前端知识架构体系22
 
 * vueCli
 * create-react-app
-
-
 
 ## 二：服务器
 
