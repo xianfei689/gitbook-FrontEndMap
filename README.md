@@ -1,5 +1,5 @@
 ---
-description: 前端知识架构体系
+description: 前端知识架构体系22
 ---
 
 # 前端知识架构体系（FrontEndMap）
