@@ -24,6 +24,7 @@ description: 前端知识架构体系22
 
 * [Vue](https://zhouxianfei.gitbooks.io/vue/content/)
 * [React](https://zhouxianfei.gitbooks.io/react/content/)
+* Angular
 
 ### 4、脚手架
 
