@@ -4,6 +4,8 @@ description: 前端知识架构体系22
 
 # 前端知识架构体系（FrontEndMap）
 
+![](/assets/import222.png)
+
 ![前端知识体系](.gitbook/assets/image %281%29.png)
 
 ## 一：开发环境
