@@ -31,24 +31,9 @@ description: 前端知识架构体系22
 * vueCli
 * create-react-app
 
-## 二：服务器
 
-### 2.1、nodejs
 
-* XXX
-* XXX
-* XXX
-
-## 三：网络
-
-### 3.1、HTTP
-
-* [http](https://github.com/frontendmap/frontendmap/blob/master/net/http.md)
-* [socket](https://github.com/frontendmap/frontendmap/blob/master/net/socket.md)
-* [ajax/fetch](https://github.com/frontendmap/frontendmap/blob/master/net/ajax-fetch.md)
-* [性能优化](https://github.com/frontendmap/frontendmap/blob/master/net/performance.md)
-
-## 四：运行环境
+## 二：运行环境
 
 ### 4.1、性能优化
 
@@ -66,6 +51,23 @@ description: 前端知识架构体系22
 
 * ES5
 * ES6
+
+## 三：服务器环境
+
+### 2.1、nodejs
+
+* XXX
+* XXX
+* XXX
+
+## **四：网络环境**
+
+### 3.1、HTTP
+
+* [http](https://github.com/frontendmap/frontendmap/blob/master/net/http.md)
+* [socket](https://github.com/frontendmap/frontendmap/blob/master/net/socket.md)
+* [ajax/fetch](https://github.com/frontendmap/frontendmap/blob/master/net/ajax-fetch.md)
+* [性能优化](https://github.com/frontendmap/frontendmap/blob/master/net/performance.md)
 
 ## 五：面试总结
 
