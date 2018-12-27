@@ -4,7 +4,7 @@ description: 前端知识架构体系22
 
 # 前端知识架构体系（FrontEndMap）
 
-![前段知识架构体系图](.gitbook/assets/image %281%29.png)
+![&#x524D;&#x7AEF;&#x77E5;&#x8BC6;&#x4F53;&#x7CFB;](.gitbook/assets/image%20%281%29.png)
 
 ## 一：开发环境
 
@@ -72,6 +72,4 @@ description: 前端知识架构体系22
 ### 5.1、2018  Interview
 
 * [2018-11-28](https://zhouxianfei.gitbooks.io/resume-front/content/)
-
-
 
