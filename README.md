@@ -4,7 +4,7 @@ description: 前端知识架构体系22
 
 # 前端知识架构体系（FrontEndMap）
 
-![&#x524D;&#x7AEF;&#x77E5;&#x8BC6;&#x4F53;&#x7CFB;](.gitbook/assets/image%20%281%29.png)
+![前端知识体系](.gitbook/assets/image %281%29.png)
 
 ## 一：开发环境
 
@@ -45,7 +45,7 @@ description: 前端知识架构体系22
 * CSS
 * JS Web API
 
-### 4.3、[ECMA标准](https://zhouxianfei.gitbooks.io/ecmascript/content/)
+### 4.3、ECMA标准
 
 * ES5
 * ES6
@@ -72,4 +72,6 @@ description: 前端知识架构体系22
 ### 5.1、2018  Interview
 
 * [2018-11-28](https://zhouxianfei.gitbooks.io/resume-front/content/)
+
+
 
