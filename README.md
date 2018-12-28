@@ -65,7 +65,7 @@ description: 前端知识架构体系22
 
 ### 3.1、HTTP
 
-* [http](https://github.com/frontendmap/frontendmap/blob/master/net/http.md)
+* [http](https://zhouxianfei.gitbooks.io/network/content/)
 * [socket](https://github.com/frontendmap/frontendmap/blob/master/net/socket.md)
 * [ajax/fetch](https://github.com/frontendmap/frontendmap/blob/master/net/ajax-fetch.md)
 * [性能优化](https://github.com/frontendmap/frontendmap/blob/master/net/performance.md)
