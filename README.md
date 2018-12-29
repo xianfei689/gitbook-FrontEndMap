@@ -1,7 +1,3 @@
----
-description: 前端知识架构体系22
----
-
 # 前端知识架构体系（FrontEndMap）
 
 ![](/assets/import222.png)
@@ -80,6 +76,4 @@ description: 前端知识架构体系22
 ### 6.1、2018  Interview
 
 * [2018-11-28](https://zhouxianfei.gitbooks.io/resume-front/content/)
-
-
 
