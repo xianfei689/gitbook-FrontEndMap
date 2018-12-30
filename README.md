@@ -37,7 +37,7 @@
 * XXX
 * XXX
 
-### 4.2、W3C 标准
+### 4.2、[W3C 标准](https://zhouxianfei.gitbooks.io/w3c/content/)
 
 * HTML
 * CSS
