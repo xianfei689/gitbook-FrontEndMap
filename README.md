@@ -41,7 +41,7 @@
 
 ### 4.2、[W3C 标准](https://zhouxianfei.gitbooks.io/w3c/content/)
 
-* Web基础（HTML CSS JS）
+* [Web基础](https://zhouxianfei.gitbooks.io/webbasic/content/)（HTML CSS JS）
 * ECMA规范
 
 ### 4.3、ECMA标准
