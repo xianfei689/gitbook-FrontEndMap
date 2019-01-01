@@ -41,9 +41,8 @@
 
 ### 4.2、[W3C 标准](https://zhouxianfei.gitbooks.io/w3c/content/)
 
-* HTML
-* CSS
-* JS Web API
+* Web基础（HTML CSS JS）
+* ECMA规范
 
 ### 4.3、ECMA标准
 
