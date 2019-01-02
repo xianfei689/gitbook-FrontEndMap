@@ -1,7 +1,5 @@
 # JavaScript 浅拷贝与深拷贝
 
-
-
 ### JavaScript 浅拷贝与深拷贝 <a id="activity-name"></a>
 
 **一、数据类型**
@@ -35,30 +33,22 @@
 
 ```javascript
 // 对象赋值
-
 var obj1 = {
   name: 'zhangsan',
   age: '18',
   language: [1, [2, 3], [4, 5]],
 };
-
 var obj2 = obj1;
-
 obj2.name = 'lisi';
-
 obj2.language[1] = ['二', '三'];
-
 console.log('obj1', obj1);
-
 console.log('obj2', obj2);
-
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1GxibwiaG5sJHCcXqjbPBbiccMmqfymUDGuWTxuM7iak5hmcg7GHicXSooFJ4Dg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 ```javascript
 // 浅拷贝
-
 var obj1 = {
   name: 'zhangsan',
   age: '18',
@@ -79,7 +69,6 @@ function shallowCopy(src) {
 }
 console.log('obj1', obj1);
 console.log('obj3', obj3);
-
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1GxibwUgzUV9VfmFmfZM1ibDGZKUggIiaH78kAZn2U03zl3qibic1ibWexBibSbWA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
@@ -94,20 +83,39 @@ console.log('obj3', obj3);
 
 `Object.assign()` 方法可以把任意多个的源对象自身的可枚举属性拷贝给目标对象，然后返回目标对象。但是 `Object.assign()` 进行的是浅拷贝，拷贝的是对象的属性的引用，而不是对象本身。
 
-```text
-var obj = { a: {a: "kobe", b: 39} };var initalObj = Object.assign({}, obj);initalObj.a.a = "wade";console.log(obj.a.a); //wade
+```javascript
+var obj = { a: { a: 'kobe', b: 39 } };
+var initalObj = Object.assign({}, obj);
+initalObj.a.a = 'wade';
+console.log(obj.a.a);//wade
+
 ```
 
 注意：**当object只有一层的时候，是深拷贝**
 
-```text
-let obj = {    username: 'kobe'    };let obj2 = Object.assign({},obj);obj2.username = 'wade';console.log(obj);//{username: "kobe"}
+```javascript
+let obj = {
+  username: 'kobe',
+};
+let obj2 = Object.assign({}, obj);
+obj2.username = 'wade';
+console.log(obj);//{username: "kobe"}
 ```
 
 **2、Array.prototype.concat\(\)**
 
-```text
-let arr = [1, 3, {    username: 'kobe'    }];let arr2=arr.concat();    arr2[2].username = 'wade';console.log(arr);
+```javascript
+let arr = [
+  1,
+  3,
+  {
+    username: 'kobe',
+  },
+];
+let arr2 = arr.concat();
+arr2[2].username = 'wade';
+console.log(arr);
+
 ```
 
 修改新对象会改到原对象：
@@ -116,8 +124,17 @@ let arr = [1, 3, {    username: 'kobe'    }];let arr2=arr.concat();    arr2[2].u
 
 **3、Array.prototype.slice\(\)**
 
-```text
-let arr = [1, 3, {    username: ' kobe'    }];let arr3 = arr.slice();arr3[2].username = 'wade'console.log(arr);
+```javascript
+let arr = [
+  1,
+  3,
+  {
+    username: ' kobe',
+  },
+];
+let arr3 = arr.slice();
+arr3[2].username = 'wade';
+console.log(arr);
 ```
 
 同样修改新对象会改到原对象：
@@ -133,8 +150,17 @@ let arr = [1, 3, {    username: ' kobe'    }];let arr3 = arr.slice();arr3[2].use
 
 可能这段话晦涩难懂，我们举个例子，将上面的例子小作修改：
 
-```text
-let arr = [1, 3, {    username: ' kobe'    }];let arr3 = arr.slice();arr3[1] = 2console.log(arr,arr3);
+```javascript
+let arr = [
+  1,
+  3,
+  {
+    username: ' kobe',
+  },
+];
+let arr3 = arr.slice();
+arr3[1] = 2;
+console.log(arr, arr3);
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1Gxib2VA07hqVyXo3yicvibjVys14XeFibXyWoKL3GHy7tn0dGqSO336W9nnOg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
@@ -143,8 +169,17 @@ let arr = [1, 3, {    username: ' kobe'    }];let arr3 = arr.slice();arr3[1] = 2
 
 **1、JSON.parse\(JSON.stringify\(\)\)**
 
-```text
-let arr = [1, 3, {    username: ' kobe'}];let arr4 = JSON.parse(JSON.stringify(arr));arr4[2].username = 'duncan'; console.log(arr, arr4)
+```javascript
+let arr = [
+  1,
+  3,
+  {
+    username: ' kobe',
+  },
+];
+let arr4 = JSON.parse(JSON.stringify(arr));
+arr4[2].username = 'duncan';
+console.log(arr, arr4);
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1Gxib4nIubUqp3EzYKFSwBhy3PZ2sofhZXrKXluqfs23QmBlD2ziaLfkYHJg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
@@ -153,8 +188,18 @@ let arr = [1, 3, {    username: ' kobe'}];let arr4 = JSON.parse(JSON.stringify(a
 
 **这种方法虽然可以实现数组或对象深拷贝，但不能处理函数。**
 
-```text
-let arr = [1, 3, {    username: ' kobe'},function(){}];let arr4 = JSON.parse(JSON.stringify(arr));arr4[2].username = 'duncan'; console.log(arr, arr4)
+```javascript
+let arr = [
+  1,
+  3,
+  {
+    username: ' kobe',
+  },
+  function() {},
+];
+let arr4 = JSON.parse(JSON.stringify(arr));
+arr4[2].username = 'duncan';
+console.log(arr, arr4);
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1GxibjtNVzibjImBSO6pNoMHz2vzY0eZfsw7hHzZknS6ZmZSNyXiawQa2Eic9Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
@@ -165,15 +210,58 @@ let arr = [1, 3, {    username: ' kobe'},function(){}];let arr4 = JSON.parse(JSO
 
 递归方法实现深度克隆原理：**遍历对象、数组直到里边都是基本数据类型，然后再去复制，就是深度拷贝。**
 
-```text
-    //定义检测数据类型的功能函数    function checkedType(target) {      return Object.prototype.toString.call(target).slice(8, -1)    }    //实现深度克隆---对象/数组    function clone(target) {      //判断拷贝的数据类型      //初始化变量result 成为最终克隆的数据      let result, targetType = checkedType(target)      if (targetType === 'object') {        result = {}      } else if (targetType === 'Array') {        result = []      } else {        return target      }      //遍历目标数据      for (let i in target) {        //获取遍历数据结构的每一项值。        let value = target[i]        //判断目标结构里的每一值是否存在对象/数组        if (checkedType(value) === 'Object' ||          checkedType(value) === 'Array') { //对象/数组里嵌套了对象/数组          //继续遍历获取到value值          result[i] = clone(value)        } else { //获取到value值是基本的数据类型或者是函数。          result[i] = value;        }      }      return result    }
+```javascript
+//定义检测数据类型的功能函数
+function checkedType(target) {
+  return;
+  Object.prototype.toString.call(target).slice(8, -1);
+}
+//实现深度克隆---对象/数组
+function clone(target) {
+  //判断拷贝的数据类型
+  //初始化变量result 成为最终克隆的数据
+  let result,
+    targetType = checkedType(target);
+  if (targetType === 'object') {
+    result = {};
+  } else if (targetType === 'Array') {
+    result = [];
+  } else {
+    return;
+    target;
+  }
+  //遍历目标数据
+  for (let i in target) {
+    //获取遍历数据结构的每一项值。
+    let value = target[i];
+    //判断目标结构里的每一值是否存在对象/数组
+    if (checkedType(value) === 'Object' || checkedType(value) === 'Array') {
+      //对象/数组里嵌套了对象/数组
+      //继续遍历获取到value值
+      result[i] = clone(value);
+    } else {
+      //获取到value值是基本的数据类型或者是函数。
+      result[i] = value;
+    }
+  }
+  return;
+  result;
+}
 ```
 
 **3、函数库lodash**
 
 该函数库也有提供 `_.cloneDeep` 用来做 Deep Copy。
 
-```text
-var _ = require('lodash');var obj1 = {    a: 1,    b: { f: { g: 1 } },    c: [1, 2, 3]};var obj2 = _.cloneDeep(obj1);console.log(obj1.b.f === obj2.b.f);// false
+```javascript
+var _ = require('lodash');
+var obj1 = {
+  a: 1,
+  b: { f: { g: 1 } },
+  c: [1, 2, 3],
+};
+var obj2 = _.cloneDeep(obj1);
+console.log(obj1.b.f === obj2.b.f);
+// false
 ```
 
