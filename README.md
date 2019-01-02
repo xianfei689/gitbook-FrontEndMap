@@ -63,9 +63,9 @@
 ### 3.1、HTTP
 
 * [http](https://zhouxianfei.gitbooks.io/network/content/)
-* [socket](https://github.com/frontendmap/frontendmap/blob/master/net/socket.md)
-* [ajax/fetch](https://github.com/frontendmap/frontendmap/blob/master/net/ajax-fetch.md)
-* [性能优化](https://github.com/frontendmap/frontendmap/blob/master/net/performance.md)
+* socket
+* ajax/fetch
+* 性能优化
 
 # 五：知识拓展
 
