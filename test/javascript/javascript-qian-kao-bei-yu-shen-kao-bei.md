@@ -56,8 +56,30 @@ console.log('obj2', obj2);
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1GxibwiaG5sJHCcXqjbPBbiccMmqfymUDGuWTxuM7iak5hmcg7GHicXSooFJ4Dg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
-```text
-// 浅拷贝 var obj1 = {    'name' : 'zhangsan',    'age' :  '18',    'language' : [1,[2,3],[4,5]],}; var obj3 = shallowCopy(obj1); obj3.name = "lisi"; obj3.language[1] = ["二","三"]; function shallowCopy(src) {    var dst = {};    for (var prop in src) {        if (src.hasOwnProperty(prop)) {            dst[prop] = src[prop];        }    }    return dst;}console.log('obj1',obj1)console.log('obj3',obj3)
+```javascript
+// 浅拷贝
+
+var obj1 = {
+  name: 'zhangsan',
+  age: '18',
+  language: [1, [2, 3], [4, 5]],
+};
+var obj3 = shallowCopy(obj1);
+obj3.name = 'lisi';
+obj3.language[1] = ['二', '三'];
+function shallowCopy(src) {
+  var dst = {};
+  for (var prop in src) {
+    if (src.hasOwnProperty(prop)) {
+      dst[prop] = src[prop];
+    }
+  }
+  return;
+  dst;
+}
+console.log('obj1', obj1);
+console.log('obj3', obj3);
+
 ```
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1GxibwUgzUV9VfmFmfZM1ibDGZKUggIiaH78kAZn2U03zl3qibic1ibWexBibSbWA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
