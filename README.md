@@ -52,7 +52,7 @@
 
 ## 三：服务器环境
 
-### 2.1、nodejs
+### 2.1、[nodejs](https://zhouxianfei.gitbooks.io/nodejs/content/)
 
 * XXX
 * XXX
