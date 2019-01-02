@@ -4,7 +4,7 @@
 
 本文先从浏览器的渲染过程来从头到尾的讲解一下回流重绘，如果大家想直接看如何减少回流和重绘，可以跳到后面。（这个渲染过程来自MDN）
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0cASvrK6p2rb9kAU8sgvsJoCJJegIaZLCy3ZBZictaQKDaEBee37c8YsexneTjE4RCIICGUxjLyfMA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/4.png)
 
 从上面这个图上，我们可以看到，浏览器渲染过程如下：
 
@@ -18,7 +18,7 @@
 
 **生成渲染树**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0cASvrK6p2rb9kAU8sgvsJobPPiaaYETXyUSLcaIOFxZTOs1sjqFcxYg8uvEoYuViblGdoociaYib4bmA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/3.png)
 
 为了构建渲染树，浏览器主要完成了以下工作：
 
@@ -58,7 +58,7 @@
 
 我们可以看到，第一个div将节点的显示尺寸设置为视口宽度的50%，第二个div将其尺寸设置为父节点的50%。而在回流这个阶段，我们就需要根据视口具体的宽度，将其转为实际的像素值（如下图）：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0cASvrK6p2rb9kAU8sgvsJoW1gVJvZqAniciaBkyIQegrHNSblB7vdaSO1fV9lLLkLEyLesqun8xlqw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/5.png)
 
 **重绘**
 
@@ -91,7 +91,7 @@
 * getComputedStyle\(\)
 * getBoundingClientRect
 
-具体可以访问这个网站：https://gist.github.com/paulirish/5d52fb081b3570c81e3a。
+具体可以访问这个网站：[https://gist.github.com/paulirish/5d52fb081b3570c81e3a。](https://gist.github.com/paulirish/5d52fb081b3570c81e3a。)
 
 以上属性和方法都需要返回最新的布局信息，因此浏览器不得不清空队列，触发回流重绘来返回正确的值。因此，我们在修改样式的时候，**最好避免使用上面列出的属性，他们都会刷新渲染队列。**如果要使用它们，最好将值缓存起来。
 
@@ -157,7 +157,6 @@ function appendDataToElement(appendToElement, data) {
 }
 const ul = document.getElementById('list');
 appendDataToElement(ul, data);
-
 ```
 
 如果我们直接这样执行的话，由于每次循环都会插入一个新的节点，会导致浏览器回流一次。
@@ -190,7 +189,6 @@ const ul = document.getElementById('list');
 const fragment = document.createDocumentFragment();
 appendDataToElement(fragment, data);
 ul.appendChild(fragment);
-
 ```
 
 **3、将原始元素拷贝到一个脱离文档的节点中，修改节点后，再替换原始的元素。**
@@ -200,7 +198,6 @@ const ul = document.getElementById('list');
 const clone = ul.cloneNode(true);
 appendDataToElement(clone, data);
 ul.parentNode.replaceChild(clone, ul);
-
 ```
 
 对于上述那种情况，我写了一个demo来测试修改前和修改后的性能。然而实验结果不是很理想。
@@ -217,7 +214,6 @@ function initP() {
     paragraphs[i].style.width = box.offsetWidth + 'px';
   }
 }
-
 ```
 
 这段代码看上去是没有什么问题，可是其实会造成很大的性能问题。在每次循环的时候，都读取了box的一个offsetWidth属性值，然后利用它来更新p标签的width属性。这就导致了每一次循环的时候，浏览器都必须先使上一次循环中的样式更新操作生效，才能响应本次循环的样式读取操作。每一次循环都会强制浏览器刷新队列。我们可以优化为：
@@ -229,7 +225,6 @@ function initP() {
     paragraphs[i].style.width = width + 'px';
   }
 }
-
 ```
 
 同样，我也写了个demo来比较两者的性能差异。你可以自己点开这个demo体验下。这个对比差距就比较明显。
@@ -240,7 +235,7 @@ function initP() {
 
 打开这个例子后，我们可以打开控制台，控制台上会输出当前的帧数\(虽然不准\)。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0cASvrK6p2rb9kAU8sgvsJouA9LEhQjT8sBAvN6GlnB2HSPXcaLkv2rhjibjAvk3e67Cv0LZm4PKlg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/8.png)
 
 从上图中，我们可以看到，帧数一直都没到60。这个时候，只要我们点击一下那个按钮，把这个元素设置为绝对定位，帧数就可以稳定60。
 
@@ -265,7 +260,7 @@ function initP() {
 
 我们可以先看个例子。我通过使用chrome的Performance捕获了一段时间的回流重绘情况，实际结果如下图：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0cASvrK6p2rb9kAU8sgvsJoK0X5K7HJK24hgkKwELzhnUWQmJ6AmshywYsrcyBIR6nP5kq7PWwN6A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/10.png)
 
 从图中我们可以看出，在动画进行的时候，没有发生任何的回流重绘。如果感兴趣你也可以自己做下实验。
 
