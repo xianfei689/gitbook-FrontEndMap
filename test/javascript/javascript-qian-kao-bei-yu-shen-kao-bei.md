@@ -152,8 +152,11 @@ console.log(arr);
 ```
 
 同样修改新对象会改到原对象：
+![](/assets/37.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1Gxib5VJd14RO8wPlPGxbY3BbWjHjN7kWtJsbX497w4TmjjWOpB9BWZWADw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+
+
 
 **关于Array的slice和concat方法的补充说明**：Array的slice和concat方法不修改原数组，只会返回一个浅复制了原数组中的元素的一个新数组。
 
