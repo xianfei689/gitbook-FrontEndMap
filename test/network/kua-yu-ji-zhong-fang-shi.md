@@ -127,7 +127,6 @@ router.get("/userlist", function(req, res, next) {
   res.write(JSON.stringify(user));
   res.end();
 });
-
 ```
 
 在响应头上添加`Access-Control-Allow-Origin`属性，指定同源策略的地址。同源策略默认地址是网页的本身。**只要浏览器检测到响应头带上了CORS，并且允许的源包括了本网站，那么就不会拦截请求响应**。
@@ -140,11 +139,55 @@ router.get("/userlist", function(req, res, next) {
 
 原生WebSocket API使用起来不太方便，我们使用Socket.io，它很好地封装了webSocket接口，提供了更简单、灵活的接口，也对不支持webSocket的浏览器提供了向下兼容。
 
-```
+```html
+//前端代码：
+<div>user input：<input type="text" /></div>
+<script src="./socket.io.js"></script>
+<script>
+  var socket = io("http://www.domain2.com:8080");
+  // 连接成功处理
+  socket.on("connect", function() {
+    // 监听服务端消息
+    socket.on("message", function(msg) {
+      console.log("data from server: ---> " + msg);
+    });
+    // 监听服务端关闭
+    socket.on("disconnect", function() {
+      console.log("Server socket has closed.");
+    });
+  });
+  document.getElementsByTagName("input")[0].onblur = function() {
+    socket.send(this.value);
+  };
+</script>
 
 ```
 
-```
+```js
+//Nodejs socket后台：
+var http = require("http");
+var socket = require("socket.io");
+// 启http服务
+var server = http.createServer(function(req, res) {
+  res.writeHead(200, {
+    "Content-type": "text/html"
+  });
+  res.end();
+});
+server.listen("8080");
+console.log("Server is running at port 8080...");
+// 监听socket连接
+socket.listen(server).on("connection", function(client) {
+  // 接收信息
+  client.on("message", function(msg) {
+    client.send("hello：" + msg);
+    console.log("data from client: ---> " + msg);
+  });
+  // 断开处理
+  client.on("disconnect", function() {
+    console.log("Client socket has closed.");
+  });
+});
 
 ```
 
@@ -156,11 +199,37 @@ router.get("/userlist", function(req, res, next) {
 
 接下来我们看个例子：`http://localhost:63342/index.html`页面向`http://localhost:3000/message.html`传递“跨域请求信息”
 
-```
+```html
+//发送信息页面 http://localhost:63342/index.html
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>跨域请求</title>
+  </head>
+  <body>
+    <iframe src="http://localhost:3000/users/reg" id="frm"></iframe>
+    <input type="button" value="OK" onclick="run()" />
+  </body>
+</html>
+<script>
+  function run() {
+    var frm = document.getElementById("frm");
+    frm.contentWindow.postMessage("跨域请求信息", "http://localhost:3000");
+  }
+</script>
 
 ```
 
-```
+```js
+//接收信息页面 http://localhost:3000/message.html
+window.addEventListener(
+  "message",
+  function(e) {
+    //通过监听message事件，可以监听对方发送的消息。
+    console.log(e.data);
+  },
+  false
+);
 
 ```
 
