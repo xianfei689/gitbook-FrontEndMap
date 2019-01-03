@@ -82,7 +82,17 @@ fn({ msg:'this  is  json  data'})
 
 JSONP都是GET和异步请求的，不存在其他的请求方式和同步请求，且jQuery默认就会给JSONP的请求清除缓存。
 
-```
+```js
+$.ajax({
+  url: "http://crossdomain.com/jsonServerResponse",
+  dataType: "jsonp",
+  type: "get", //可以省略
+  jsonpCallback: "fn", //->自定义传递给服务器的函数名，而不是使用jQuery自动生成的，可省略
+  jsonp: "jsonp", //->把传递函数名的那个形参callback变为jsonp，可省略
+  success: function(data) {
+    console.log(data);
+  }
+});
 
 ```
 
