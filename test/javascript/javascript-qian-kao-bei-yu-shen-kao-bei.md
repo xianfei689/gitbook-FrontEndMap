@@ -180,7 +180,11 @@ arr3[1] = 2;
 console.log(arr, arr3);
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1Gxib2VA07hqVyXo3yicvibjVys14XeFibXyWoKL3GHy7tn0dGqSO336W9nnOg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/38.png)
+
+
+
+
 
 **五、深拷贝的实现方式**
 
@@ -198,8 +202,11 @@ let arr4 = JSON.parse(JSON.stringify(arr));
 arr4[2].username = 'duncan';
 console.log(arr, arr4);
 ```
+![](/assets/39.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1Gxib4nIubUqp3EzYKFSwBhy3PZ2sofhZXrKXluqfs23QmBlD2ziaLfkYHJg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+
+
 
 原理： 用JSON.stringify将对象转成JSON字符串，再用JSON.parse\(\)把字符串解析成对象，一去一来，新的对象产生了，而且对象会开辟新的栈，实现深拷贝。
 
@@ -218,8 +225,11 @@ let arr4 = JSON.parse(JSON.stringify(arr));
 arr4[2].username = 'duncan';
 console.log(arr, arr4);
 ```
+![](/assets/40.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1GxibjtNVzibjImBSO6pNoMHz2vzY0eZfsw7hHzZknS6ZmZSNyXiawQa2Eic9Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+
+
 
 这是因为 `JSON.stringify()` 方法是将一个JavaScript值\(对象或者数组\)转换为一个 JSON字符串，不能接受函数。
 
