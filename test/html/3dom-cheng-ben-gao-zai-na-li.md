@@ -91,7 +91,9 @@ DOM树从根节点开始遍历**可见**节点，这里之所以强调了“可�
 * Paint不一定会触发Layout，比如改个颜色改个背景；（repaint 重绘）
 * 图片下载完也会重新出发Layout和Paint；
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0elY5J3ByiaACdNibia22r5uZ21T0AvAZibO8Q5gkNcwfOSSib7bRB7VR7eyeFApS0R30qyOicm9s40HYgw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/83.png)
+
+
 
 **何时触发reflow和repaint**
 
