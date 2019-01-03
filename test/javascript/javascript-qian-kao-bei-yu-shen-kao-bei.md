@@ -81,7 +81,11 @@ console.log('obj3', obj3);
 
 上面例子中，obj1是原始数据，obj2是赋值操作得到，而obj3浅拷贝得到。我们可以很清晰看到对原始数据的影响，具体请看下表：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1Gxib4dIrib5FT4cXjB62HbvDWVFKsvoTls1ibaAkMq4yHcyicoMjjatFqBcHQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/35.png)
+
+
+
+
 
 **四、浅拷贝的实现方式**
 
