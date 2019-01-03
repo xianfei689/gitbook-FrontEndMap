@@ -20,8 +20,9 @@
 **深拷贝和浅拷贝是只针对Object和Array这样的引用数据类型的**。
 
 深拷贝和浅拷贝的示意图大致如下：
+![](/assets/32.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1GxibrEOYNibCRXq3TyyBZw6iaSibQ5b4l0NmmW6iceBnzpgaBwcarehdHibhqQg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
 
 **浅拷贝只复制指向某个对象的指针，而不复制对象本身，新旧对象还是共享同一块内存。但深拷贝会另外创造一个一模一样的对象，新对象跟原对象不共享内存，修改新对象不会改到原对象。**
 
