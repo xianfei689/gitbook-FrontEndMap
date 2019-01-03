@@ -75,7 +75,7 @@ console.log('obj1', obj1);
 console.log('obj3', obj3);
 ```
 
-![](/assets/31.png)
+![](/assets/34.png)
 
 
 
