@@ -11,7 +11,9 @@
 
 引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1GxibzBmJd1UmVEjEbyNxr7MlAk5jIQkmEjEMDclZgPogN8n940Lb3jwZfA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/31.png)
+
+
 
 **二、浅拷贝与深拷贝**
 
