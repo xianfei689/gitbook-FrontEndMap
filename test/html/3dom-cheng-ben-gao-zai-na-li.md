@@ -64,7 +64,9 @@ DOM树构建过程：当前节点的所有子节点都构建好后才会去构�
 
 DOM树和CSSOM树合并生成render树
 
-![](https://mmbiz.qpic.cn/mmbiz_png/zPh0erYjkib1ibiaXvKe3CD488saRTLUcEHyEyE49EBfE7NRHyj8y7iaust1Fiblrrmz9maPLzoLgITUTViaC2yPa4KQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/80.png)
+
+
 
 简单描述这个过程：
 
