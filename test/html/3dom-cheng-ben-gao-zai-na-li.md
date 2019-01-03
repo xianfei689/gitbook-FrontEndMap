@@ -68,7 +68,7 @@ DOM树构建过程：当前节点的所有子节点都构建好后才会去构�
 
 DOM树和CSSOM树合并生成render树
 
-![](/assets/81.png)
+![](/assets/82.png)
 
 
 
