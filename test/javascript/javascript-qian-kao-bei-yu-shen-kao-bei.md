@@ -47,8 +47,9 @@ obj2.language[1] = ['二', '三'];
 console.log('obj1', obj1);
 console.log('obj2', obj2);
 ```
+![](/assets/33.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1GxibwiaG5sJHCcXqjbPBbiccMmqfymUDGuWTxuM7iak5hmcg7GHicXSooFJ4Dg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
 
 ```javascript
 // 浅拷贝
