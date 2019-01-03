@@ -169,7 +169,9 @@ GoogleChromeLabs 里面有一个csstriggers，列出了各个CSS属性对浏览�
 
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0elY5J3ByiaACdNibia22r5uZ291pgkbO5sR1KClapaJhKNTqy6IdiagRial4RwyIzpPUy1iaYiabqHS9Z7w/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/84.png)
+
+
 
 * 浏览器拿到HTML后，从上到下顺序解析文档
 * 此时遇到css、js外链，则同时发起请求
