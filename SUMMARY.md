@@ -12,6 +12,7 @@
   * [4、 CSS 与 JS 是这样阻塞 DOM 解析和渲染的](test/html/4-css-yu-js-shi-zhe-yang-zu-sai-dom-jie-xi-he-ran-de.md)
 * [JavaScript](test/javascript/README.md)
   * [JavaScript 浅拷贝与深拷贝](test/javascript/javascript-qian-kao-bei-yu-shen-kao-bei.md)
+  * [深拷贝vs浅拷贝](test/javascript/shen-kao-bei-vs-qian-kao-bei.md)
 * [性能优化](test/xing-neng-you-hua/README.md)
   * [test](test/xing-neng-you-hua/test.md)
 
