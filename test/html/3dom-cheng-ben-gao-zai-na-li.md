@@ -52,7 +52,11 @@ PS: 实质上还存在CSSOM：CSS Object Model，浏览器将CSS代码解析成�
 
 无论是DOM还是CSSOM，都是要经过 `Bytes→characters→tokens→nodes→objectmodel`这个过程。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0elY5J3ByiaACdNibia22r5uZ24m9gogyQ7pHqHnd4YWaaGibTSibJVicPoHD3EWp5u4Txmou37ByBS2yWw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/80.png)
+
+
+
+
 
 DOM树构建过程：当前节点的所有子节点都构建好后才会去构建当前节点的下一个兄弟节点。
 
