@@ -75,7 +75,9 @@ console.log('obj1', obj1);
 console.log('obj3', obj3);
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1GxibwUgzUV9VfmFmfZM1ibDGZKUggIiaH78kAZn2U03zl3qibic1ibWexBibSbWA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/34.png)
+
+
 
 上面例子中，obj1是原始数据，obj2是赋值操作得到，而obj3浅拷贝得到。我们可以很清晰看到对原始数据的影响，具体请看下表：
 
