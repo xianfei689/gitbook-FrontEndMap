@@ -8,7 +8,7 @@ JavaScript出于安全方面的考虑，不允许跨域调用其他页面的对�
 
 有一点必须要注意：**跨域并不是请求发不出去，请求能发出去，服务端能收到请求并正常返回结果，只是结果被浏览器拦截了**。之所以会跨域，是因为受到了同源策略的限制，同源策略要求源相同才能正常进行通信，即协议、域名、端口号都完全一致。
 
-大家可以参照下图，有助于深入理解跨域。![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0cjb4OhBzLBA1K9N06eJMqMib1dz4x0ibianloxOVfwicyBB018DudcXoPsQlGJrI3WNjPJb0cUFK1ibXw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+大家可以参照下图，有助于深入理解跨域。![](/assets/a2.png)
 
 特别说明两点：
 
@@ -93,7 +93,6 @@ $.ajax({
     console.log(data);
   }
 });
-
 ```
 
 #### 四、处理跨域方法二——CORS
@@ -110,19 +109,30 @@ CORS要求浏览器\(&gt;IE10\)和服务器的同时支持，是跨域的根本�
 
 只需要在服务器端做一些小小的改造即可：
 
-```
+```html
+header("Access-Control-Allow-Origin:*");
 
+header("Access-Control-Allow-Methods:POST,GET");
 ```
 
 例如：网站`http://localhost:63342/`页面要请求`http://localhost:3000/users/userlist`页面，userlist页面返回json字符串格`{name:'Mr.Cao',gender:'male',career:'IT Education'}`：
 
-```
+```js
+//在服务器端设置同源策略地址
+router.get("/userlist", function(req, res, next) {
+  var user = { name: "Mr.Cao", gender: "male", career: "IT Education" };
+  res.writeHeader(200, {
+    "Access-Control-Allow-Origin": "http://localhost:63342"
+  });
+  res.write(JSON.stringify(user));
+  res.end();
+});
 
 ```
 
 在响应头上添加`Access-Control-Allow-Origin`属性，指定同源策略的地址。同源策略默认地址是网页的本身。**只要浏览器检测到响应头带上了CORS，并且允许的源包括了本网站，那么就不会拦截请求响应**。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0cjb4OhBzLBA1K9N06eJMqMmx7xoX68ibnhHBb3D6R5eKws4c7ZnarHSicS2xzzIyeQJpCvkS892oqg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/a3.png)
 
 #### 五、处理跨域方法三——WebSocket
 
