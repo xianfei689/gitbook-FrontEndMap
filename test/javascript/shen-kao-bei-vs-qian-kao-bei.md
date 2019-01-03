@@ -132,3 +132,23 @@ console.log(arr);
 修改新对象会改到原对象：
 
 ![](/assets/36.png)
+
+
+
+**3、Array.prototype.slice\(\)**
+
+```javascript
+let arr = [
+1,
+3,
+{
+username: ' kobe',
+},
+];
+let arr3 = arr.slice();
+arr3[2].username = 'wade';
+console.log(arr);
+```
+
+同样修改新对象会改到原对象：
+![](/assets/37.png)
