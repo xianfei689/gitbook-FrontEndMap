@@ -160,7 +160,6 @@ router.get("/userlist", function(req, res, next) {
     socket.send(this.value);
   };
 </script>
-
 ```
 
 ```js
@@ -188,7 +187,6 @@ socket.listen(server).on("connection", function(client) {
     console.log("Client socket has closed.");
   });
 });
-
 ```
 
 #### 六、处理跨域方法四——postMessage
@@ -217,7 +215,6 @@ socket.listen(server).on("connection", function(client) {
     frm.contentWindow.postMessage("跨域请求信息", "http://localhost:3000");
   }
 </script>
-
 ```
 
 ```js
@@ -230,7 +227,6 @@ window.addEventListener(
   },
   false
 );
-
 ```
 
 #### 七、参考文章
