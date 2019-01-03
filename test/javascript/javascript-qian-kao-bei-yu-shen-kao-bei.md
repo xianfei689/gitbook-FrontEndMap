@@ -130,7 +130,11 @@ console.log(arr);
 
 修改新对象会改到原对象：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0fXooDPZouVS6juuGEP1GxibMqY9voW4Mg2ydNXBnbeZc82amtiaaAEicNSbpRVibMNoYibjUcAFiayyxAQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/assets/36.png)
+
+
+
+
 
 **3、Array.prototype.slice\(\)**
 
