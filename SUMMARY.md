@@ -19,6 +19,7 @@
 * [Vue](test/vue/README.md)
   * [VueRouter](test/vue/vuerouter.md)
   * [生命周期](test/vue/sheng-ming-zhou-qi.md)
+  * [VueX](test/vue/vuex.md)
   * [双向数据绑定 MVVM](test/vue/base.md)
 * [react](test/react/README.md)
   * [base](test/react/base.md)
