@@ -17,7 +17,7 @@
 * [性能优化](test/xing-neng-you-hua/README.md)
   * [test](test/xing-neng-you-hua/test.md)
 * [Vue](test/vue/README.md)
-  * [base](test/vue/base.md)
+  * [双向数据绑定 MVVM](test/vue/base.md)
 * [react](test/react/README.md)
   * [base](test/react/base.md)
 
