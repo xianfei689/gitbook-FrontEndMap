@@ -1,6 +1,6 @@
 # 生命周期
 
-![](../../.gitbook/assets/image%20%283%29.png)
+![](../../.gitbook/assets/image%20%285%29.png)
 
 ### 1.What is? <a id="1what-is"></a>
 
