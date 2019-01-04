@@ -1,8 +1,6 @@
 # 3、DOM成本高在哪里
 
-
-
-### DOM 操作成本到底高在哪儿？
+## DOM 操作成本到底高在哪儿？
 
 从我接触前端到现在，一直听到的一句话：操作DOM的成本很高，不要轻易去操作DOM。尤其是React、vue等MV\*框架的出现，数据驱动视图的模式越发深入人心，jQuery时代提供的强大便利地操作DOM的API在前端工程里用的越来越少。刨根问底，这里说的成本，到底高在哪儿呢？
 
@@ -47,16 +45,11 @@ PS: 实质上还存在CSSOM：CSS Object Model，浏览器将CSS代码解析成�
     <div><img src="awesome-photo.jpg" /></div>
   </body>
 </html>
-
 ```
 
 无论是DOM还是CSSOM，都是要经过 `Bytes→characters→tokens→nodes→objectmodel`这个过程。
 
-![](/assets/80.png)
-
-
-
-
+![](../../.gitbook/assets/80.png)
 
 DOM树构建过程：当前节点的所有子节点都构建好后才会去构建当前节点的下一个兄弟节点。
 
@@ -68,9 +61,7 @@ DOM树构建过程：当前节点的所有子节点都构建好后才会去构�
 
 DOM树和CSSOM树合并生成render树
 
-![](/assets/82.png)
-
-
+![](../../.gitbook/assets/82.png)
 
 简单描述这个过程：
 
@@ -91,9 +82,7 @@ DOM树从根节点开始遍历**可见**节点，这里之所以强调了“可�
 * Paint不一定会触发Layout，比如改个颜色改个背景；（repaint 重绘）
 * 图片下载完也会重新出发Layout和Paint；
 
-![](/assets/83.png)
-
-
+![](../../.gitbook/assets/83.png)
 
 **何时触发reflow和repaint**
 
@@ -166,12 +155,9 @@ GoogleChromeLabs 里面有一个csstriggers，列出了各个CSS属性对浏览�
     <script src="app.js"></script>
   </body>
 </html>
-
 ```
 
-![](/assets/84.png)
-
-
+![](../../.gitbook/assets/84.png)
 
 * 浏览器拿到HTML后，从上到下顺序解析文档
 * 此时遇到css、js外链，则同时发起请求

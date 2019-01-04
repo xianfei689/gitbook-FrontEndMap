@@ -1,8 +1,8 @@
+# 深拷贝vs浅拷贝
 
 JavaScript 浅拷贝与深拷贝
 
-
-### JavaScript 浅拷贝与深拷贝 
+## JavaScript 浅拷贝与深拷贝
 
 **一、数据类型**
 
@@ -13,17 +13,13 @@ JavaScript 浅拷贝与深拷贝
 
 引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体。
 
-![](/assets/31.png)
-
+![](../../.gitbook/assets/31.png)
 
 **二、浅拷贝与深拷贝**
 
 **深拷贝和浅拷贝是只针对Object和Array这样的引用数据类型的**。
 
-深拷贝和浅拷贝的示意图大致如下：
-![](/assets/32.png)
-
-
+深拷贝和浅拷贝的示意图大致如下： ![](../../.gitbook/assets/32.png)
 
 **浅拷贝只复制指向某个对象的指针，而不复制对象本身，新旧对象还是共享同一块内存。但深拷贝会另外创造一个一模一样的对象，新对象跟原对象不共享内存，修改新对象不会改到原对象。**
 
@@ -48,9 +44,8 @@ obj2.language[1] = ['二', '三'];
 console.log('obj1', obj1);
 console.log('obj2', obj2);
 ```
-![](/assets/33.png)
 
-
+![](../../.gitbook/assets/33.png)
 
 ```javascript
 // 浅拷贝
@@ -76,17 +71,11 @@ console.log('obj1', obj1);
 console.log('obj3', obj3);
 ```
 
-![](/assets/34.png)
-
-
+![](../../.gitbook/assets/34.png)
 
 上面例子中，obj1是原始数据，obj2是赋值操作得到，而obj3浅拷贝得到。我们可以很清晰看到对原始数据的影响，具体请看下表：
 
-![](/assets/35.png)
-
-
-
-
+![](../../.gitbook/assets/35.png)
 
 **四、浅拷贝的实现方式**
 
@@ -99,7 +88,6 @@ var obj = { a: { a: 'kobe', b: 39 } };
 var initalObj = Object.assign({}, obj);
 initalObj.a.a = 'wade';
 console.log(obj.a.a);//wade
-
 ```
 
 注意：**当object只有一层的时候，是深拷贝**
@@ -126,14 +114,11 @@ username: 'kobe',
 let arr2 = arr.concat();
 arr2[2].username = 'wade';
 console.log(arr);
-
 ```
 
 修改新对象会改到原对象：
 
-![](/assets/36.png)
-
-
+![](../../.gitbook/assets/36.png)
 
 **3、Array.prototype.slice\(\)**
 
@@ -150,5 +135,5 @@ arr3[2].username = 'wade';
 console.log(arr);
 ```
 
-同样修改新对象会改到原对象：
-![](/assets/37.png)
+同样修改新对象会改到原对象： ![](../../.gitbook/assets/37.png)
+
