@@ -1,5 +1,9 @@
 # VueX
 
+\*\*\*\*
+
+\*\*\*\*
+
 **1、vuex有哪几种属性？**  
 答：有五种，分别是 State、 Getter、Mutation 、Action、 Module  
   
