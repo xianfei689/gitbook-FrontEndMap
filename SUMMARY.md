@@ -17,6 +17,7 @@
 * [性能优化](test/xing-neng-you-hua/README.md)
   * [test](test/xing-neng-you-hua/test.md)
 * [Vue](test/vue/README.md)
+  * [VueRouter](test/vue/vuerouter.md)
   * [生命周期](test/vue/sheng-ming-zhou-qi.md)
   * [双向数据绑定 MVVM](test/vue/base.md)
 * [react](test/react/README.md)
