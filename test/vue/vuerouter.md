@@ -44,5 +44,29 @@ new Vue({
 })
 ```
 
- home.vue，点击显示就会将子路由显示在出来，子路由的出口必须在父路由里面，否则子路由无法显示。
+ home.vue，点击显示就会将子路由显示在出来，子路由的出口必须在父路由里面，否则子路由无法显示。  
+
+
+## 路由之间跳转
+
+* 声明式（标签跳转）
+* 编程式（ js 跳转） router.push\('index'\)
+
+## Vue-router有哪几种导航钩子？
+
+####  全局导航钩子
+
+* router.beforeEach\(to, from, next\),
+* router.beforeResolve\(to, from, next\),
+* router.afterEach\(to, from ,next\)
+
+#### 组件内钩子
+
+* beforeRouteEnter,
+* beforeRouteUpdate,
+* beforeRouteLeave
+
+#### 单独路由独享组件
+
+* beforeEnter
 
