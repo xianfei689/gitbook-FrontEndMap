@@ -43,10 +43,10 @@
 
 ---
 
-#### 2.1、[W3C 标准](https://zhouxianfei.gitbooks.io/w3c/content/)
+#### 2.1、前端标准
 
-* [Web基础](https://zhouxianfei.gitbooks.io/webbasic/content/)（HTML CSS JS）
-* ECMA规范
+* W3C标准
+* ECMA标准
 
 #### 2.2、JavaScript
 
