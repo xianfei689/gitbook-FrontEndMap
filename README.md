@@ -48,10 +48,9 @@
 * W3C标准
 * ECMA标准
 
-#### 2.2、JavaScript
+#### 2.2、web基础
 
-* ES5
-* ES6
+* [HTML&CSS&JavaScript](https://zhouxianfei.gitee.io/gitbook-front/webbasic/)
 * **javascript**
 
 # 三：服务端环境
