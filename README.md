@@ -1,6 +1,4 @@
-# 前端知识架构体系（FrontEndMap）
-
-## 前端知识架构体系（FrontEndMap）
+# 前端知识架构体系
 
 ![](gitbook/assets/import222.png)
 
@@ -8,7 +6,7 @@
 
 #### **前端网络开发（Front-end Web Development）:**![](gitbook/assets/22.png)
 
-### 一：开发环境
+## 一：开发环境
 
 #### 1.1、开发工具
 
@@ -24,9 +22,9 @@
 
 #### 1.3、前端框架
 
-* [Vue](https://zhouxianfei.gitbooks.io/vue/content/)
-* [React](https://zhouxianfei.gitbooks.io/react/content/)
-* Angular
+* [**Vue**](https://zhouxianfei.gitbooks.io/vue/content/)
+* [**React**](https://zhouxianfei.gitbooks.io/react/content/)
+* **Angular**
 
 #### 1.4、脚手架
 
@@ -46,11 +44,11 @@
 * [Web基础](https://zhouxianfei.gitbooks.io/webbasic/content/)（HTML CSS JS）
 * ECMA规范
 
-#### 4.3、ECMA标准
+#### 4.3、JavaScript
 
 * ES5
 * ES6
-* [ECMA](https://zhouxianfei.gitbooks.io/ecmascript/content/)
+* **javascript**
 
 ### 三：服务器环境
 
@@ -79,4 +77,6 @@
 #### 6.1、2018  Interview
 
 * [2018-11-28](https://zhouxianfei.gitbooks.io/resume-front/content/)
+
+
 
