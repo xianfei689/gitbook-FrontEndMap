@@ -43,12 +43,6 @@
 
 ---
 
-#### 4.1、性能优化
-
-* XXX
-* XXX
-* XXX
-
 #### 4.2、[W3C 标准](https://zhouxianfei.gitbooks.io/w3c/content/)
 
 * [Web基础](https://zhouxianfei.gitbooks.io/webbasic/content/)（HTML CSS JS）
