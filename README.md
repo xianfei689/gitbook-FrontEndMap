@@ -32,7 +32,7 @@
 
 * [**Vue**](https://zhouxianfei.gitbooks.io/vue/content/)
 * [**React**](https://zhouxianfei.gitbooks.io/react/content/)
-* **Angular**
+* Angular
 
 ### 1.4、脚手架
 
