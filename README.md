@@ -68,7 +68,7 @@
 
 ---
 
-#### 3.1、HTTP
+#### 4.1、HTTP
 
 * [http](https://zhouxianfei.gitbooks.io/network/content/)
 * socket
