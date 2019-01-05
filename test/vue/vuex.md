@@ -1,11 +1,11 @@
 # VueX
 
-![](../../.gitbook/assets/image%20%283%29.png)
+![](../../gitbook/assets/image%20%283%29.png)
 
 一个应用可以看作是由上面三部分组成: **View, Actions,State**,数据的流动也是从View =&gt; Actions =&gt; State =&gt;View 以此达到数据的单向流动.但是项目较大的, 组件嵌套过多的时候, 多组件共享同一个State会在数据传递时出现很多问题.Vuex就是为了解决这些问题而产生的.  
  Vuex可以被看作项目中所有组件的数据中心,我们将所有组件中共享的State抽离出来,任何组件都可以访问和操作我们的数据中心.
 
-![](../../.gitbook/assets/image%20%281%29.png)
+![](../../gitbook/assets/image%20%281%29.png)
 
  上图可以很好的说明Vuex的组成,一个实例化的Vuex.Store由state, mutations和actions三个属性组成:
 

@@ -49,7 +49,7 @@ PS: 实质上还存在CSSOM：CSS Object Model，浏览器将CSS代码解析成�
 
 无论是DOM还是CSSOM，都是要经过 `Bytes→characters→tokens→nodes→objectmodel`这个过程。
 
-![](../../.gitbook/assets/80.png)
+![](../../gitbook/assets/80.png)
 
 DOM树构建过程：当前节点的所有子节点都构建好后才会去构建当前节点的下一个兄弟节点。
 
@@ -61,7 +61,7 @@ DOM树构建过程：当前节点的所有子节点都构建好后才会去构�
 
 DOM树和CSSOM树合并生成render树
 
-![](../../.gitbook/assets/82.png)
+![](../../gitbook/assets/82.png)
 
 简单描述这个过程：
 
@@ -82,7 +82,7 @@ DOM树从根节点开始遍历**可见**节点，这里之所以强调了“可�
 * Paint不一定会触发Layout，比如改个颜色改个背景；（repaint 重绘）
 * 图片下载完也会重新出发Layout和Paint；
 
-![](../../.gitbook/assets/83.png)
+![](../../gitbook/assets/83.png)
 
 **何时触发reflow和repaint**
 
@@ -157,7 +157,7 @@ GoogleChromeLabs 里面有一个csstriggers，列出了各个CSS属性对浏览�
 </html>
 ```
 
-![](../../.gitbook/assets/84.png)
+![](../../gitbook/assets/84.png)
 
 * 浏览器拿到HTML后，从上到下顺序解析文档
 * 此时遇到css、js外链，则同时发起请求

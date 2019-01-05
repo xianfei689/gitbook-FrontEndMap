@@ -2,11 +2,11 @@
 
 ## 前端知识架构体系（FrontEndMap）
 
-![](.gitbook/assets/import222.png)
+![](gitbook/assets/import222.png)
 
-![](.gitbook/assets/1.png)
+![](gitbook/assets/1.png)
 
-#### **前端网络开发（Front-end Web Development）:**![](.gitbook/assets/22.png)
+#### **前端网络开发（Front-end Web Development）:**![](gitbook/assets/22.png)
 
 ### 一：开发环境
 
