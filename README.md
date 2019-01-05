@@ -30,8 +30,8 @@
 
 ### 1.3、前端框架
 
-* [**Vue**](https://zhouxianfei.gitbooks.io/vue/content/)
-* [**React**](https://zhouxianfei.gitbooks.io/react/content/)
+* [**Vue**](https://zhouxianfei.gitee.io/gitbook-front/vue/)
+* [**React**](https://zhouxianfei.gitee.io/gitbook-front/react/)
 * Angular
 
 ### 1.4、脚手架
@@ -43,7 +43,7 @@
 
 ---
 
-#### 2.1、前端标准
+#### 2.1、[前端标准](https://zhouxianfei.gitee.io/gitbook-front/frontEndMap/webStandard)
 
 * W3C标准
 * ECMA标准
@@ -67,20 +67,18 @@
 
 ---
 
-#### 4.1、HTTP
+#### 4.1、[HTTP](https://zhouxianfei.gitee.io/gitbook-front/network/)
 
-* [http](https://zhouxianfei.gitbooks.io/network/content/)
+* http
 * socket
-* ajax/fetch
-* 性能优化
 
 # 五：知识拓展
 
 ---
 
-#### 5.1、test
+#### 5.1、拓展知识
 
-* [2018-12](https://zhouxianfei.gitbooks.io/knowledge/content/)
+* [**2018-12**](https://zhouxianfei.gitee.io/gitbook-front/knowledge/)
 * XXX
 
 # 六：面试总结
@@ -89,7 +87,7 @@
 
 #### 6.1、2018  Interview
 
-* [2018-11-28](https://zhouxianfei.gitbooks.io/resume-front/content/)
+* [**2018-11-28**](https://zhouxianfei.gitee.io/gitbook-front/resume/)
 
 
 
