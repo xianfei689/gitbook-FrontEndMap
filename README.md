@@ -43,12 +43,12 @@
 
 ---
 
-#### 4.2、[W3C 标准](https://zhouxianfei.gitbooks.io/w3c/content/)
+#### 2.1、[W3C 标准](https://zhouxianfei.gitbooks.io/w3c/content/)
 
 * [Web基础](https://zhouxianfei.gitbooks.io/webbasic/content/)（HTML CSS JS）
 * ECMA规范
 
-#### 4.3、JavaScript
+#### 2.2、JavaScript
 
 * ES5
 * ES6
@@ -58,7 +58,7 @@
 
 ---
 
-#### 2.1、[nodejs](https://zhouxianfei.gitbooks.io/nodejs/content/)
+#### 3.1、[nodejs](https://zhouxianfei.gitbooks.io/nodejs/content/)
 
 * XXX
 * XXX
