@@ -1,38 +1,33 @@
 # webpack优化
 
-
-
 ## 开发工具心得：如何 10 倍提高你的 Webpack 构建效率
 
 ![](../../.gitbook/assets/image.png)
 
 webpack 是个好东西，和 NPM 搭配起来使用管理模块实在非常方便。而 Babel 更是神一般的存在，让我们在这个浏览器尚未全面普及 ES6 语法的时代可以先一步体验到新的语法带来的便利和效率上的提升。在 React 项目架构中这两个东西基本成为了标配，但 commonjs 的模块必须在使用前经过 webpack 的构建\(后文称为 build\)才能在浏览器端使用，而每次修改也都需要重新构建（后文称为 rebuild）才能生效，如何提高 webpack 的构建效率成为了提高开发效率的关键之一。
 
-### 1. Webpack 的构建流程 
+### 1. Webpack 的构建流程
 
-在开始正式的优化之前，让我们先回顾一下 Webpack 的构建流程，有哪些关键步骤，只有了解了这些，我们才能分析出哪些地方有优化的可能性。  
+在开始正式的优化之前，让我们先回顾一下 Webpack 的构建流程，有哪些关键步骤，只有了解了这些，我们才能分析出哪些地方有优化的可能性。
 
-
-![](../../.gitbook/assets/image%20%283%29.png)
+![](../../.gitbook/assets/image %283%29.png)
 
 > 图2：webpack is a module bundler.
 
 首先，我们来看看官方对于 Webpack 的理念阐释，webapck 把所有的静态资源都看做是一个 module，通过 webpack，将这些 module 组成到一个 bundle 中去，从而实现在页面上引入一个 bundle.js，来实现所有静态资源的加载。所以详细一点看，webpack 应该是这样的：
 
-![](../../.gitbook/assets/image%20%281%29.png)
-
-![](https://segmentfault.com/img/remote/1460000005770047)
+![](../../.gitbook/assets/image %281%29.png)
 
 > 图3：Every static asset should be able to be a module --webpack
 
 通过 loader，webpack 可以把各种非原生 js 的静态资源转换成 JavaScript，所以理论上任何一种静态资源都可以成为一个 module。  
 当然 webpack 还有很多其他好玩的特性，但不是本文的重点因此不铺开进行说明了。了解了上述的过程，我们就可以根据这些过程的前后处理进行对应的优化，接下来我们会针对 build 和 rebuild 的过程给与相应的意见。
 
-### 2. RESOLVE 
+### 2. RESOLVE
 
 我们先从解析模块路径和分析依赖讲起，有人可能觉得这无所谓，但当项目应用依赖的模块越来越多，越来越重时，项目越来越大，文件和文件夹越来越多时，这个过程就变得越来越关乎性能。
 
-#### 2.1 减小 Webpack 覆盖的范围 
+#### 2.1 减小 Webpack 覆盖的范围
 
 > build +, rebuild +
 
@@ -73,16 +68,16 @@ resolve: {
 /some/node_modules/a
 /some/src/a
 /node_modules/a
-/src/a 
+/src/a
 ```
 
 大部分的情况下使用 `root` 即可，只有在有很复杂的路径下，才考虑使用 `moduledirectories`，这可以[明显提高 webpack 的构建性能](https://github.com/webpack/webpack/issues/1574#issuecomment-157520561)。这个 [issue](https://github.com/webpack/webpack/issues/472#issuecomment-55706013) 也很详细地讨论了这个问题。
 
-### 3. LOADERS 
+### 3. LOADERS
 
 webpack 官方和社区为我们提供了各种各样 loader 来处理各种类型的文件，这些 loader 的配置也直接影响了构建的性能。
 
-#### 3.1 Babel-loader: 能者少劳 
+#### 3.1 Babel-loader: 能者少劳
 
 > build ++, rebuild ++
 
@@ -147,11 +142,11 @@ module.exports = {
 }
 ```
 
-### 4. PLUGINS 
+### 4. PLUGINS
 
 webpack 官方和社区为我们提供了很多方便的插件，有些插件为我们开发和生产带来了很多的便利，但是不合适地使用插件也会拖慢 webpack 的构建效率，而有些插件虽然不会为我们的开发上直接提供便利，但使用他们却可以帮助我们提高 webpack 的构建效率，这也是本文会提到的。
 
-#### 4.1 SourceMaps 
+#### 4.1 SourceMaps
 
 > build +
 
@@ -169,24 +164,24 @@ SourceMaps 是一个非常实用的功能，可以让我们在 chrome debug 时�
 
 具体各自的区别请参考 [https://github.com/webpack/do...](https://github.com/webpack/docs/wiki/configuration#devtool) ，我们这里推荐使用 cheap-source-map，也就是去掉了column mapping 和 loader-sourceMap（例如 jsx to js） 的 sourceMap，虽然带上 `eval` 参数的可以快更多，但是这种 sourceMap 只能看，不能调试，得不偿失。
 
-#### 4.2 OPTIMIZATION 
+#### 4.2 OPTIMIZATION
 
 > build ++，rebuild ++
 
 webpack 提供了一些可以优化浏览器端性能的优化插件，如UglifyJsPlugin，OccurrenceOrderPlugin 和 DedupePlugin，都很实用，也都在消耗构建性能（UglifyJsPlugin 非常耗性能），如果你是在开发环境下，这些插件最好都不要使用，毕竟脚本大一些，跑的慢一些这些比起每次构建要耗费更多时间来说，显然还是后者更会消磨开发者的耐心，因此，只在正产环境中使用 OPTIMIZATION。
 
-#### 4.3 CommonsChunk 
+#### 4.3 CommonsChunk
 
 > rebuild +
 
 当你的 webpack 构建任务中有多个入口文件，而这些文件都 require 了相同的模块，如果你不做任何事情，webpack 会为每个入口文件引入一份相同的模块，显然这样做，会使得相同模块变化时，所有引入的 entry 都需要一次 rebuild，造成了性能的浪费，CommonsChunkPlugin 可以将相同的模块提取出来单独打包，进而减小 rebuild 时的性能消耗。这里有一篇很通俗易懂的使用方法：[http://webpack.toobug.net/zh-...](http://webpack.toobug.net/zh-cn/chapter3/common-chunks-plugin.html) ，感兴趣的朋友不妨一试。
 
-#### 4.4 DLL & DllReference 
+#### 4.4 DLL & DllReference
 
 > build +++, rebuild +++
 
 除了正在开发的源代码之外，通常还会引入很多第三方 NPM 包，这些包我们不会进行修改，但是仍然需要在每次 build 的过程中消耗构建性能，那有没有什么办法可以减少这些消耗呢？DLLPlugin 就是一个解决方案，他通过前置这些依赖包的构建，来提高真正的 build 和 rebuild 的构建效率。  
-鉴于现有的资料对于这两个插件的解释都不是很清楚，笔者这里翻译了一篇[日本同学的文章](http://qiita.com/pirosikick/items/c77db84dbed4c447a6fe#dll%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%81%A8%E3%81%AF)，通过一个简单的例子来说明一下这两个插件的用法。我们举例，把 react 和 react-dom 打包成为 dll bundle。  
+鉴于现有的资料对于这两个插件的解释都不是很清楚，笔者这里翻译了一篇[日本同学的文章](http://qiita.com/pirosikick/items/c77db84dbed4c447a6fe#dllバンドルとは)，通过一个简单的例子来说明一下这两个插件的用法。我们举例，把 react 和 react-dom 打包成为 dll bundle。  
 首先，我们来写一个 [DLLPlugin](https://github.com/webpack/docs/wiki/list-of-plugins#dllplugin) 的 config 文件。
 
 > webpack.dll.config.js
@@ -400,7 +395,7 @@ module.exports = {
 2. 如果只是引入 npm 包一部分的功能，比如 `require('react/lib/React')` 或者 `require('lodash/fp/extend')` ，这种情况下 `DLLBundle` 仍可以使用。
 3. 当然如果只是引用了 `react` 这类的话，`externals` 因为配置简单所以也推荐使用。
 
-#### 4.5 [HappyPack](https://github.com/amireh/happypack) 
+#### 4.5 [HappyPack](https://github.com/amireh/happypack)
 
 > build +, rebuild +
 
@@ -429,11 +424,11 @@ happyPack 的文档写的很易懂，这里就不再赘述，happyPack 不仅利
 
 > The builds above were run on Linux over a machine with 12 cores.
 
-### 5. 其他 
+### 5. 其他
 
 上面我们针对 webpack 的 resolve、loader 和 plugin 的过程给出了相应的优化意见，除了这些哪些优化点呢？其实有些优化贯穿在这个流程中，比如缓存和文件 IO。
 
-#### 5.1 Cache 
+#### 5.1 Cache
 
 无论在何种性能优化中，缓存总是必不可少的一部分，毕竟每次变动都只影响很小的一部分，如果能够缓存住那些没有变动的部分，直接拿来使用，自然会事半功倍，在 webpack 的整个构建过程中，有多个地方提供了缓存的机会，如果我们打开了这些缓存，会大大加速我们的构建，尤其是 rebuild 的效率。
 
@@ -455,7 +450,7 @@ babel-loader 可以利用系统的临时文件夹缓存经过 babel 处理好的
 
 上面提到的 happyPack 插件也同样提供了 cache 功能，默认是以 `.happypack/cache--[id].json` 的路径进行缓存。因为是缓存在当前目录下，所以他也可以辅助下次 build 时的效率。
 
-#### 5.2 FileSystem 
+#### 5.2 FileSystem
 
 默认的情况下，构建好的目录一定要输出到某个目录下面才能使用，但 webpack 提供了一种很棒的读写机制，使得我们可以直接在内存中进行读写，从而极大地提高 IO 的效率，开启的方法也很简单。
 
@@ -496,4 +491,6 @@ app.listen(xxxx, function(err) {
    }
 }
 ```
+
+
 
