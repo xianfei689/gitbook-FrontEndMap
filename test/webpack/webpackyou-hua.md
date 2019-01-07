@@ -10,13 +10,13 @@ webpack 是个好东西，和 NPM 搭配起来使用管理模块实在非常方�
 
 在开始正式的优化之前，让我们先回顾一下 Webpack 的构建流程，有哪些关键步骤，只有了解了这些，我们才能分析出哪些地方有优化的可能性。
 
-![](../../.gitbook/assets/image %283%29.png)
+![](../../.gitbook/assets/image%20%284%29.png)
 
 > 图2：webpack is a module bundler.
 
 首先，我们来看看官方对于 Webpack 的理念阐释，webapck 把所有的静态资源都看做是一个 module，通过 webpack，将这些 module 组成到一个 bundle 中去，从而实现在页面上引入一个 bundle.js，来实现所有静态资源的加载。所以详细一点看，webpack 应该是这样的：
 
-![](../../.gitbook/assets/image %281%29.png)
+![](../../.gitbook/assets/image%20%282%29.png)
 
 > 图3：Every static asset should be able to be a module --webpack
 
@@ -352,6 +352,8 @@ dll-user.bundle.js  2.01 kB       0  [emitted]  dll-user
 </body>
 ```
 
+![](../../.gitbook/assets/image%20%281%29.png)
+
 ![](https://segmentfault.com/img/remote/1460000005770049)
 
 因为 Dll bundle 在依赖安装完毕后就可以进行了，我们可以在第一次执行 dev server 前执行一次 dll bundle 的 webapck 任务。
@@ -398,6 +400,8 @@ module.exports = {
 #### 4.5 [HappyPack](https://github.com/amireh/happypack)
 
 > build +, rebuild +
+
+![](../../.gitbook/assets/image%20%288%29.png)
 
 webpack 的长时间构建搞的大家都很 unhappy。于是 @amireh 想到了一个点子，既然 loader 默认都是一个进程在跑，那是否可以让 loader 多进程去处理文件呢？
 
@@ -491,6 +495,4 @@ app.listen(xxxx, function(err) {
    }
 }
 ```
-
-
 
