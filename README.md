@@ -2,11 +2,11 @@
 
 ## 前端知识架构体系
 
-![](.gitbook/assets/import222%20%281%29.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/1.1.png)
 
-![](.gitbook/assets/1.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/1.2.png)
 
-![](.gitbook/assets/22.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/1.3.png)
 
 ## 一：开发环境
 
