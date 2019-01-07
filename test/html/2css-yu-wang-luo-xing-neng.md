@@ -39,7 +39,7 @@ CSS 是页面渲染的关键因素之一，（当页面存在外链 CSS 时，�
 
 如果我们把全部的 CSS 代码都放在一个文件中，请求的表现如下：
 
-![](../../gitbook/assets/11.png)
+![](../../.gitbook/assets/11.png)
 
 我们可以观察到，这个单独的 CSS 文件会以 最高 的优先级下载。
 
@@ -54,7 +54,7 @@ CSS 是页面渲染的关键因素之一，（当页面存在外链 CSS 时，�
 <link rel="stylesheet" href="print.css" media="print" />
 ```
 
-浏览器会以不同的优先级下载 CSS 文件：![](../../gitbook/assets/12.png)不符合当前上下文的 CSS 文件将以 \_最低\_ 优先级进行下载。
+浏览器会以不同的优先级下载 CSS 文件：![](../../.gitbook/assets/12%20%281%29.png)不符合当前上下文的 CSS 文件将以 \_最低\_ 优先级进行下载。
 
 浏览器仍然会下载全部的 CSS 文件，但只有符合当前上下文的 CSS 文件会阻塞渲染。
 
@@ -81,7 +81,7 @@ all.css 的内容：
 @import url(imported.css);
 ```
 
-最终，浏览器的请求瀑布图呈现为：![](../../gitbook/assets/14.png)
+最终，浏览器的请求瀑布图呈现为：![](../../.gitbook/assets/14%20%281%29.png)
 
 关键路径上的 CSS 文件并没有并行下载。
 
@@ -91,7 +91,7 @@ all.css 的内容：
 <link rel="stylesheet" href="all.css" /><link rel="stylesheet" href="imported.css" />
 ```
 
-可以提高网络性能：![](../../gitbook/assets/16.png)
+可以提高网络性能：![](../../.gitbook/assets/16%20%281%29.png)
 
 关键路径上的 CSS 文件是并行下载的。
 
@@ -119,7 +119,7 @@ all.css 的内容：
 ```
 
 会出现这样的请求瀑布图:  
-![](../../gitbook/assets/17.png)
+![](../../.gitbook/assets/17.png)
 
 由于预加载扫描器失效，导致资源在 Firefox 中无法并行下载（IE/Edge 中有着同样的问题）。
 
@@ -132,7 +132,7 @@ all.css 的内容：
   @import url(app.css);</style>
 ```
 
-![](../../gitbook/assets/18.png)
+![](../../.gitbook/assets/18.png)
 
 与 `<script>` 标签一样，子资源无法并行下载。
 
@@ -162,7 +162,7 @@ all.css 的内容：
 ```
 
 瀑布图:  
-![](../../gitbook/assets/19.png)
+![](../../.gitbook/assets/19.png)
 
 可以看到，缺失引号会破坏 Chrome 的预加载（Opera 与 Safari 表现也是如此。）
 
@@ -173,7 +173,7 @@ all.css 的内容：
   @import url("app.css");</style>
 ```
 
-![](../../gitbook/assets/20.png)
+![](../../.gitbook/assets/20.png)
 
 添加引号后，Chrome、Opera 和 Safari 的预加载扫描器表现恢复正常，
 
@@ -217,7 +217,7 @@ all.css 的内容：
   document.getElementsByTagName('head')[0].appendChild(script);</script>
 ```
 
-从下面的瀑布图可以看到，JavaScript 文件在 CSSOM 构建完成之后才开始下载，完全失去了并行下载的优势：![](../../gitbook/assets/21.png)
+从下面的瀑布图可以看到，JavaScript 文件在 CSSOM 构建完成之后才开始下载，完全失去了并行下载的优势：![](../../.gitbook/assets/21%20%281%29.png)
 
 尽管预加载扫描器希望能预下载 `analytics.js`，但对 `analytics.js` 的引用并非一开始就存在于 HTML 的文档之中，它是由 `<link>` 后面 `<script>`的代码动态创建的，在创建之前，它只是一些字符串，而不是预加载扫描器可识别的资源，无形中它被隐藏起来了。
 
@@ -239,7 +239,7 @@ all.css 的内容：
   <link rel="stylesheet" href="app.css" />
 ```
 
-![](../../gitbook/assets/23.png)
+![](../../.gitbook/assets/23%20%281%29.png)
 
 交换位置之后，子资源可以并行下载，页面的整体性能提高了两倍以上。（译者注：本节的内容只同意一半，`<head>` 中的代码，确实是建议先放 `<script>`，再放 `<link>`，后文也会有相关的内容，但第三方代码放在 `<head>` 中的第一项，取决于相关代码的用途。如非必要，放在页面末尾或空闲时下载及执行也未尝不可）
 
@@ -275,7 +275,7 @@ all.css 的内容：
 <script src="i-need-to-block-dom-but-DO-need-to-query-cssom.js"></script>
 ```
 
-根据这种组织方式，我们的页面会按最佳的方式下载与执行相关代码。下面的截图中，粉色代表 JS 的执行，但它们都比较“纤细”了，希望你能看得清楚。（第一栏的（下同））第一行是整个页面的时间轴，留意该行粉色的部分，代表 JS 正在执行。第二行是首个 JS 文件的时间轴，可以看到下载完后并立即执行。第三行是 CSS 的时间轴，因而没有任何 JS 执行。最后一行是第二个 JS 文件的时间轴，可以清晰地看到，直到 CSS 下载完成后才执行。![](../../gitbook/assets/24.png)
+根据这种组织方式，我们的页面会按最佳的方式下载与执行相关代码。下面的截图中，粉色代表 JS 的执行，但它们都比较“纤细”了，希望你能看得清楚。（第一栏的（下同））第一行是整个页面的时间轴，留意该行粉色的部分，代表 JS 正在执行。第二行是首个 JS 文件的时间轴，可以看到下载完后并立即执行。第三行是 CSS 的时间轴，因而没有任何 JS 执行。最后一行是第二个 JS 文件的时间轴，可以清晰地看到，直到 CSS 下载完成后才执行。![](../../.gitbook/assets/24.png)
 
 **注意**，你应该根据页面的实际情况测试这种代码组织方式，取决于 CSS 与 JavaScript 文件大小与 JavaScript 文件执行所需的时间，可能会出现不同的结果。记得多测试！（译者注：根据实践经验，`<head>` 中的代码组织基本可以按照这种方式，即 JS 在 CSS 之前，因为 `<head>` 中的 JS 代码基本不依赖 CSS，唯一的反例是 JS 代码体积非常大或执行时间很长。）
 

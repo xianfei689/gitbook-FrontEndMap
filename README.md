@@ -1,20 +1,14 @@
-# 前端知识架构体系
+# 前端知识架构体系（FrontEndMap）
 
-![](gitbook/assets/import222.png)
+## 前端知识架构体系
 
----
+![](.gitbook/assets/import222%20%281%29.png)
 
-![](gitbook/assets/1.png)
+![](.gitbook/assets/1.png)
 
----
+![](.gitbook/assets/22.png)
 
-![](gitbook/assets/22.png)
-
----
-
-# 一：开发环境
-
----
+## 一：开发环境
 
 ### 1.1、开发工具
 
@@ -39,9 +33,7 @@
 * vueCli
 * create-react-app
 
-# 二：客户端环境
-
----
+## 二：客户端环境
 
 #### 2.1、[前端标准](https://zhouxianfei.gitee.io/gitbook-front/frontEndMap/webStandard)
 
@@ -53,9 +45,7 @@
 * [**HTML&CSS&JavaScript**](https://zhouxianfei.gitee.io/gitbook-front/webbasic/)
 * [**javascript**](https://zhouxianfei.gitee.io/gitbook-front/javascript/)
 
-# 三：服务端环境
-
----
+## 三：服务端环境
 
 #### 3.1、[nodejs](https://zhouxianfei.gitbooks.io/nodejs/content/)
 
@@ -63,31 +53,23 @@
 * XXX
 * XXX
 
-# **四：网络环境**
-
----
+## **四：网络环境**
 
 #### 4.1、[HTTP](https://zhouxianfei.gitee.io/gitbook-front/network/)
 
 * http
 * socket
 
-# 五：知识拓展
-
----
+## 五：知识拓展
 
 #### 5.1、拓展知识
 
 * [**2018-12**](https://zhouxianfei.gitee.io/gitbook-front/knowledge/)
 * XXX
 
-# 六：面试总结
-
----
+## 六：面试总结
 
 #### 6.1、2018  Interview
 
 * [**2018-11-28**](https://zhouxianfei.gitee.io/gitbook-front/resume/)
-
-
 
