@@ -13,13 +13,13 @@ JavaScript 浅拷贝与深拷贝
 
 引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体。
 
-![](../../.gitbook/assets/31.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/5.1.png)
 
 **二、浅拷贝与深拷贝**
 
 **深拷贝和浅拷贝是只针对Object和Array这样的引用数据类型的**。
 
-深拷贝和浅拷贝的示意图大致如下： ![](../../.gitbook/assets/32.png)
+深拷贝和浅拷贝的示意图大致如下： ![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/5.2.png)
 
 **浅拷贝只复制指向某个对象的指针，而不复制对象本身，新旧对象还是共享同一块内存。但深拷贝会另外创造一个一模一样的对象，新对象跟原对象不共享内存，修改新对象不会改到原对象。**
 
@@ -45,7 +45,7 @@ console.log('obj1', obj1);
 console.log('obj2', obj2);
 ```
 
-![](../../.gitbook/assets/33%20%282%29.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/5.3.png)
 
 ```javascript
 // 浅拷贝
@@ -71,11 +71,11 @@ console.log('obj1', obj1);
 console.log('obj3', obj3);
 ```
 
-![](../../.gitbook/assets/34.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/5.4.png)
 
 上面例子中，obj1是原始数据，obj2是赋值操作得到，而obj3浅拷贝得到。我们可以很清晰看到对原始数据的影响，具体请看下表：
 
-![](../../.gitbook/assets/35%20%281%29.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/5.5.png)
 
 **四、浅拷贝的实现方式**
 
@@ -118,7 +118,7 @@ console.log(arr);
 
 修改新对象会改到原对象：
 
-![](../../.gitbook/assets/36%20%282%29.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/5.6.png)
 
 **3、Array.prototype.slice\(\)**
 
@@ -135,5 +135,5 @@ arr3[2].username = 'wade';
 console.log(arr);
 ```
 
-同样修改新对象会改到原对象： ![](../../.gitbook/assets/37%20%282%29.png)
+同样修改新对象会改到原对象： ![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/5.7.png)
 

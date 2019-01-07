@@ -1,6 +1,6 @@
 # 生命周期
 
-![](../../.gitbook/assets/image-5.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/7.0.png)
 
 ## 1.What is?
 

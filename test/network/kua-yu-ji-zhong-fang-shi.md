@@ -2,7 +2,7 @@
 
 ## 一、什么是跨域
 
-![](../../.gitbook/assets/a1.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/6.0.png)
 
 JavaScript出于安全方面的考虑，不允许跨域调用其他页面的对象。那什么是跨域呢，简单地理解就是因为JavaScript同源策略的限制，`a.com`域名下的js无法操作`b.com`或是`c.a.com`域名下的对象。
 
@@ -10,7 +10,7 @@ JavaScript出于安全方面的考虑，不允许跨域调用其他页面的对�
 
 有一点必须要注意：**跨域并不是请求发不出去，请求能发出去，服务端能收到请求并正常返回结果，只是结果被浏览器拦截了**。之所以会跨域，是因为受到了同源策略的限制，同源策略要求源相同才能正常进行通信，即协议、域名、端口号都完全一致。
 
-大家可以参照下图，有助于深入理解跨域。![](../../.gitbook/assets/a2.png)
+大家可以参照下图，有助于深入理解跨域。![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/6.1.png)
 
 特别说明两点：
 
@@ -127,7 +127,7 @@ router.get("/userlist", function(req, res, next) {
 
 在响应头上添加`Access-Control-Allow-Origin`属性，指定同源策略的地址。同源策略默认地址是网页的本身。**只要浏览器检测到响应头带上了CORS，并且允许的源包括了本网站，那么就不会拦截请求响应**。
 
-![](https://github.com/xianfei689/gitbook-FrontEndMap/tree/7f5b93a81b95525f94ed66da3a368a66aa1883d2/gitbook/assets/a3.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/6.2.png)
 
 ## 五、处理跨域方法三——WebSocket
 

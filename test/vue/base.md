@@ -2,7 +2,7 @@
 
 ## 双向数据绑定
 
-![](../../.gitbook/assets/image-6.png)
+![](http://zhouxianfei.gitee.io/imgstore/front/frontEndMap/9.1.png)
 
 **数据劫持结合发布者-订阅者** 的方式，通过 **Object.defineProperty（）** 来 **劫持** 各个属性的setter，getter，在 **数据变动时,发布消息给订阅者，触发相应监听回调。**
 
