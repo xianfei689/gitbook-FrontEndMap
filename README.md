@@ -50,8 +50,8 @@
 
 #### 2.2、web基础
 
-* [HTML&CSS&JavaScript](https://zhouxianfei.gitee.io/gitbook-front/webbasic/)
-* **javascript**
+* [**HTML&CSS&JavaScript**](https://zhouxianfei.gitee.io/gitbook-front/webbasic/)
+* [**javascript**](https://zhouxianfei.gitee.io/gitbook-front/javascript/)
 
 # 三：服务端环境
 
